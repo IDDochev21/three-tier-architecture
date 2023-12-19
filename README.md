@@ -12,6 +12,8 @@ Then in **CMD**
 Using the same path paste: <br>
 To run the website:
 ````
+cd demo_dj
+cd demo
 python manage.py runserver
 ````
 To run the script:
