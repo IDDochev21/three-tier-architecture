@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple form</title>
+    <script src="https://unpkg.com/htmx.org@1.9.4" integrity="sha384-zUfuhFKKZCbHTY6aRR46gxiqszMk5tcHjsVFxnUo8VMus4kHGVdIYVbOYYNlKmHV" crossorigin="anonymous"></script>
+</head>
+<body>
+<h1>Please add your most valuable data for us to sell:</h1>
+
+<form hx-post="{% url 'sample-post' %}" hx-target="#message">
+    {% csrf_token %}
+    <input type="text" name="name" placeholder="Name" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <input type="color" name="favourite_color" placeholder="Favourite color" required>
+    <input type="submit" value="Submit">
+</form>
+<div id="message"></div>
+
+</body>
+</html>
